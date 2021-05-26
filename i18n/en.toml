@@ -1,8 +1,32 @@
 [regular]
-  other = "Regular Dates"
+  other = "Regular dates"
+
+[partys]
+  other = "Partys"
 
 [about]
-  other = "About"
+  other = "About us"
+
+[concerts]
+  other = "Concerts"
+
+[information-event]
+  other = "Information event"
+
+[external-event]
+  other = "external event"
+
+[workshops]
+  other = "Workshops"
+
+[contact]
+  other = "Contact"
+
+[newsletter]
+  other = "Newsletter"
+
+[archive]
+  other = "Archive"
 
 [translations]
   other = "Translations"
