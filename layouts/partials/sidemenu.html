@@ -1,18 +1,21 @@
 <sidebar class="sidebar">
-{{ range .Site.Sections }}
+{{ range .Site.Params.menuOrder }}
+	{{ $order := . }}
+	{{ range where $.Pages "Section" $order }}
 				<ul>
-					<li><a href="{{ .URL }}">{{ i18n .Name . }}</a>
+					<li><a href="{{ .URL }}">{{ .Name | lower | T }}</a>
 				</li>
 				</ul>
+	{{ end }}
 {{ end }}
 {{- range .Site.Menus.main }}
 	{{- if .HasChildren }}
 				<ul>
-					<li><a href="#">{{ i18n .Name . }}a</a>
+					<li><a href="#">{{ .Name }}a</a>
 				<ul>
 		{{- range .Children }}
 				<li >
-				<a href="{{ .URL }}">{{ i18n .Name . }}b</a>
+				<a href="{{ .URL }}">{{ .Name }}b</a>
 				</li>
 		{{ end }}
 				</ul>
@@ -25,5 +28,4 @@
 				</ul>
 {{- end }}
 				{{ partial "i18nlist.html" . }}
-
 			</sidebar>
