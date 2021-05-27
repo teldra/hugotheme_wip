@@ -1,0 +1,24 @@
+baseURL = "https://example.org/"
+title = "AJZ"
+theme = "hugotheme_wip"
+defaultContentLanguageInSubdir = true
+DefaultContentLanguage = "de"
+PluralizeListTitles = false
+
+[languages]
+	[languages.de]
+        LanguageName = "Deutsch"
+        weight = 1
+        languageCode = "de-DE"
+    [languages.ld]
+    	LanguageName = "leichtes Deutsch"
+    	weight = 2
+        languageCode = "de-DE"
+    [languages.en]
+    	LanguageName = "English"
+    	weight = 3
+    	languageCode = "en-US"
+
+[params]
+    description = "AJZ e.V. gmbH"
+    menuOrder = ["regular", "partys", "concerts", "info-events", "workshops", "external-events", "about-us", "archive" ]
