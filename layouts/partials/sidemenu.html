@@ -1,11 +1,14 @@
 <sidebar class="sidebar">
 {{ range .Site.Params.menuOrder }}
 	{{ $order := . }}
-	{{ range where $.Pages "Section" $order }}
+	{{ range where $.Site.Pages "Section" $order }}
+		{{ $name := .Name | lower }}
+		{{ if eq $name $order }}
 				<ul>
 					<li><a href="{{ .URL }}">{{ .Name | lower | T }}</a>
 				</li>
 				</ul>
+		{{ end }}
 	{{ end }}
 {{ end }}
 {{- range .Site.Menus.main }}

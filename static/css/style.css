@@ -64,6 +64,7 @@ a:hover {
   padding: 0.4em;
   color: black;
   text-align: left;
+  font-size: small;
 }
 
 .sidebar a:link, .sidebar a:visited {
@@ -113,21 +114,22 @@ a:hover {
   min-height: 90em;
   color: #000000;
   padding-top: 0;
+  margin-left: 5px;
 }
 
 .content h1 {
-	margin-top: 6px;
-	font-size: x-large;
-	margin-bottom: 8px;
+  margin-top: 6px;
+  font-size: x-large;
+  margin-bottom: 8px;
 }
 
 
 
 .content h2 {
-	font-size: large;
+  font-size: large;
 }
 .content h3 {
-	font-size: medium;
+  font-size: medium;
 }
 
 
@@ -140,23 +142,24 @@ a:hover {
 
 @media all and (min-width: 600px) {
   .layout {
-  	margin: 0;
+    margin: 0;
   }
 
   .sidebar {
      flex: 1 auto;
   }
+
 }
 
  
 @media all and (max-width: 710px) {
   .layout {
-  	margin-left: 0;
-  	padding: 0;
+    margin-left: 0;
+    padding: 0;
   }
 
   .sidebar {
-  	margin-right: 5px;
+    margin-right: 5px;
   }
  
   .sidebar li {
@@ -171,13 +174,14 @@ a:hover {
 
 @media all and (min-width: 710px) {
   .layout {
-  	width: 710px;
-  	margin: auto;
+    width: 710px;
+    margin: auto;
   }
 
   .content {
     flex: 3 0px;
     order: 2;
+    margin-left: 0;
   }
  
   .sidebar {
