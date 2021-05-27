@@ -4,29 +4,20 @@
 [partys]
   other = "Partys"
 
-[about]
-  other = "Über uns"
-
 [concerts]
   other = "Konzerte"
 
-[information-event]
+[info-events]
   other = "Infoveranstaltung"
-
-[external-event]
-  other = "externe Veranstaltung"
 
 [workshops]
   other = "Workshops"
 
-[contact]
-  other = "Kontakt"
+[external-events]
+  other = "externe Veranstaltung"
 
-[newsletter]
-  other = "Newsletter"
+[about-us]
+  other = "Über uns"
 
 [archive]
   other = "Archiv"
-
-[translations]
-  other = "Übersetzung"

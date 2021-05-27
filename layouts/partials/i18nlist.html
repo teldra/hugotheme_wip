@@ -1,10 +1,19 @@
+{{ if .IsHome }}
 {{ if .IsTranslated }}
-<h3>{{ i18n "translations" }}</h3>
+<h4>Translations</h4>
+{{ range $.Site.Home.AllTranslations }}
 <ul>
-    {{ range .Translations }}
-    <li>
-        <a href="{{ .Permalink }}">{{ .Lang }}: {{ .Name }}</a>
-    </li>
-    {{ end }}
+	<li><a href="{{ .Permalink }}">{{ .Language.LanguageName }}</a></li>
 </ul>
+{{ end }}
+{{ end }}
+{{ else }}
+{{ if .IsTranslated }}
+	<h4>Translations</h4>
+	<ul>
+	{{ range .Translations }}
+		<a href="{{ .Permalink }}">{{ .Language.LanguageName }}</a>
+	{{ end}}
+	</ul>
+{{ end }}
 {{ end }}

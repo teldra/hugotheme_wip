@@ -2,7 +2,7 @@
 					<h1> Welcome</h1>
 					This is the Buntehaus e.V.
 					<br><br><br>
-					<h1>Aktuelles:</h1>
+					<h1>News:</h1>
 {{ range .Site.RegularPages }}
 					<h2><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
 					{{ if .Description }}
@@ -11,7 +11,7 @@
 					{{ if .Content }}
 					{{ .Summary }}
 					<br>
-					.. <a href="{{ .RelPermalink }}">weiterlesen</a>
+					.. <a href="{{ .RelPermalink }}">read on</a>
 				    <br><br>
 				    {{ else }}
 				    <br>

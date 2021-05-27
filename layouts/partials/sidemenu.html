@@ -1,22 +1,29 @@
 <sidebar class="sidebar">
+{{ range .Site.Sections }}
+				<ul>
+					<li><a href="{{ .URL }}">{{ i18n .Name . }}</a>
+				</li>
+				</ul>
+{{ end }}
 {{- range .Site.Menus.main }}
-{{- if .HasChildren }}
+	{{- if .HasChildren }}
 				<ul>
-					<li><a href="#">{{ .Pre }}{{ i18n .Name . }}</a>
+					<li><a href="#">{{ i18n .Name . }}a</a>
 				<ul>
-				{{- range .Children }}
+		{{- range .Children }}
 				<li >
-				<a href="{{ .URL }}">{{ i18n .Name . }}</a>
+				<a href="{{ .URL }}">{{ i18n .Name . }}b</a>
 				</li>
-				{{ end }}
+		{{ end }}
 				</ul>
 				</ul>
-				{{ else }}
+	{{ else }}
 				<ul>
-					<li><a {{ printf "href=%q" .URL | safeHTMLAttr }}>{{ .Pre }}{{ i18n .Name . }}</a>
-				{{- end }}
+					<li><a href="{{ .URL | relLangURL }}">{{ .Name }}</a>
+	{{- end }}
 				</li>
 				</ul>
-				{{- end }}
+{{- end }}
 				{{ partial "i18nlist.html" . }}
+
 			</sidebar>

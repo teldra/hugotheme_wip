@@ -4,6 +4,7 @@
 			    {{ if .Description }}
 					{{ .Description }}<br>
 				{{ end }}
+				{{ if isset .Params "images" }}<img class="imagelist" src="{{ index .Params "images" }}" /><br>{{ end }}
 				{{ if .Content }}
 				{{ .Summary }}
 				<br>

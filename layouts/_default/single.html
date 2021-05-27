@@ -2,6 +2,7 @@
 	<h1><a href="{{ .RelPermalink }}">{{ .Title }}</a></h1>
 		{{ if .Description }}
 		{{ .Description }}<br>
+		{{ if isset .Params "images" }}<br><img class="imagesingle" src="{{ index .Params "images" }}" /><br>{{ end }}
 		{{ end }}
 		{{ if .Content }}
 		{{ .Content }}
